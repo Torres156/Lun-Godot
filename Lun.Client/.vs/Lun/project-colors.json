@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "da659356-eed7-42c4-b564-fb5798c71921": {
+      "ProjectGuid": "da659356-eed7-42c4-b564-fb5798c71921",
+      "DisplayName": "Lun.Client",
+      "ColorIndex": 0
+    },
+    "dc634554-8922-4d09-b863-1fadb931ba75": {
+      "ProjectGuid": "dc634554-8922-4d09-b863-1fadb931ba75",
+      "DisplayName": "Lun.Server",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

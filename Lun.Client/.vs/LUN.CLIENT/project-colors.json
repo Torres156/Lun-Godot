@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "430f8318-0cf8-42a3-b917-7268b78c160d": {
+      "ProjectGuid": "430f8318-0cf8-42a3-b917-7268b78c160d",
+      "DisplayName": "Lun.Client",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
