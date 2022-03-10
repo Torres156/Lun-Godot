@@ -8,4 +8,5 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
+.vs/
 data_*/

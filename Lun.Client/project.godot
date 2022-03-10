@@ -8,9 +8,19 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "ImageTexture",
+"class": "CustomGradientTexture",
+"language": "GDScript",
+"path": "res://Extends/ExtendGradient.gd"
+} ]
+_global_script_class_icons={
+"CustomGradientTexture": ""
+}
+
 [application]
 
-config/name="Lun.Client"
+config/name="Lun"
 run/main_scene="res://Views/Scenes/Menu.tscn"
 config/icon="res://icon.png"
 
@@ -28,4 +38,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/filters/use_fxaa=true
 environment/default_environment="res://default_env.tres"
