@@ -10,7 +10,27 @@
       "ProjectGuid": "dc634554-8922-4d09-b863-1fadb931ba75",
       "DisplayName": "Lun.Server",
       "ColorIndex": 1
+    },
+    "25553ec2-da0f-4d17-93c3-24396fa6bf01": {
+      "ProjectGuid": "25553ec2-da0f-4d17-93c3-24396fa6bf01",
+      "DisplayName": "Lun",
+      "ColorIndex": 2
+    },
+    "f2810281-5f92-487c-aa64-a8bda198cb9c": {
+      "ProjectGuid": "f2810281-5f92-487c-aa64-a8bda198cb9c",
+      "DisplayName": "Lun.Server",
+      "ColorIndex": 3
+    },
+    "7f6ff356-7c97-4868-b322-f3a7680fba22": {
+      "ProjectGuid": "7f6ff356-7c97-4868-b322-f3a7680fba22",
+      "DisplayName": "Lun.Shared",
+      "ColorIndex": 4
+    },
+    "acb28165-2020-4eb6-a8fb-197f503dfeab": {
+      "ProjectGuid": "acb28165-2020-4eb6-a8fb-197f503dfeab",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 6
 }

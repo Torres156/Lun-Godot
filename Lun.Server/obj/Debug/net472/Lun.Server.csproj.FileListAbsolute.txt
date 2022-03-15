@@ -1,0 +1,16 @@
+D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.csproj.AssemblyReference.cache
+D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.csproj.SuggestedBindingRedirects.cache
+D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.AssemblyInfoInputs.cache
+D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.AssemblyInfo.cs
+D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.csproj.CoreCompileInputs.cache
+D:\Projetos\Godot\Lun\Lun.Server\bin\Debug\net472\Lun.Server.exe.config
+D:\Projetos\Godot\Lun\Lun.Server\bin\Debug\net472\Lun.Server.exe
+D:\Projetos\Godot\Lun\Lun.Server\bin\Debug\net472\Lun.Server.pdb
+D:\Projetos\Godot\Lun\Lun.Server\bin\Debug\net472\LiteNetLib.dll
+D:\Projetos\Godot\Lun\Lun.Server\bin\Debug\net472\Newtonsoft.Json.dll
+D:\Projetos\Godot\Lun\Lun.Server\bin\Debug\net472\Lun.Shared.dll
+D:\Projetos\Godot\Lun\Lun.Server\bin\Debug\net472\Lun.Shared.pdb
+D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.csproj.CopyComplete
+D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.exe
+D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.pdb

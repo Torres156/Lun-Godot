@@ -98,7 +98,7 @@ namespace Lun.Scripts.Models.Components
 
 					if (input.ButtonIndex == (int)ButtonList.Left && !dragPress)
 					{
-						dragPress = true;
+						dragPress    = true;
 						dragPosition = mousepos - this.RectGlobalPosition;
 					}
 				}
@@ -109,8 +109,8 @@ namespace Lun.Scripts.Models.Components
 				{
 					if (mouse.ButtonMask == (int)ButtonList.Left)
 					{
-						var mousepos = mouse.GlobalPosition;
-						this.RectGlobalPosition = mousepos - dragPosition;
+						var                     mousepos = mouse.GlobalPosition;
+						this.RectGlobalPosition          = mousepos - dragPosition;
 					}
 					else
 					{

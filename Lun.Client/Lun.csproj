@@ -5,5 +5,12 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="LiteNetLib" Version="0.9.5.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lun.Shared\Lun.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\Controller\" />
   </ItemGroup>
 </Project>

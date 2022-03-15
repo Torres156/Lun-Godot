@@ -7,6 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lun", "Lun.csproj", "{25553
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lun.Server", "..\Lun.Server\Lun.Server.csproj", "{F2810281-5F92-487C-AA64-A8BDA198CB9C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lun.Shared", "..\Lun.Shared\Lun.Shared.csproj", "{7F6FF356-7C97-4868-B322-F3A7680FBA22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ACB28165-2020-4EB6-A8FB-197F503DFEAB}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +38,14 @@ Global
 		{F2810281-5F92-487C-AA64-A8BDA198CB9C}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
 		{F2810281-5F92-487C-AA64-A8BDA198CB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2810281-5F92-487C-AA64-A8BDA198CB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F6FF356-7C97-4868-B322-F3A7680FBA22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6FF356-7C97-4868-B322-F3A7680FBA22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6FF356-7C97-4868-B322-F3A7680FBA22}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6FF356-7C97-4868-B322-F3A7680FBA22}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6FF356-7C97-4868-B322-F3A7680FBA22}.ExportRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6FF356-7C97-4868-B322-F3A7680FBA22}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
+		{7F6FF356-7C97-4868-B322-F3A7680FBA22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6FF356-7C97-4868-B322-F3A7680FBA22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
