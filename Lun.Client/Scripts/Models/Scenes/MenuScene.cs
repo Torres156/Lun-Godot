@@ -7,18 +7,15 @@ namespace Lun.Scripts.Models.Scenes
 	public class MenuScene : Control
 	{
 		Panel Login, Register;
+		Label Status;
+
+		long timerReconnect;
 
 		public override void _Ready()
 		{
-			OS.SetWindowTitle(Settings.WindowTitle);
-			OS.WindowSize      = Settings.WindowSize;
-			OS.WindowMaximized = Settings.WindowMaximize;
-
-			if (!OS.WindowMaximized)
-				OS.CenterWindow();
-
 			GetNode<Label>("Footer/Text").Text = $"{Settings.WindowTitle} - Version {LunVersion}";
-
+			Status = GetNode<Label>("Status");
+						
 			Login = GetNode<Panel>("Login");
 			Login.GetNode("Exit").Connect("button_up", this, nameof(Login_Exit));
 			Login.GetNode("Register").Connect("button_up", this, nameof(Login_Register));
@@ -27,6 +24,26 @@ namespace Lun.Scripts.Models.Scenes
 			Register = GetNode<Panel>("Register");
 			Register.GetNode("Exit").Connect("button_up", this, nameof(Register_Exit));
 			Register.GetNode("Create").Connect("button_up", this, nameof(Register_Create));
+		}
+
+		public override void _Process(float delta)
+		{
+			if (!Network.Socket.IsConnected && TickCount > timerReconnect)
+			{
+				Network.Socket.Connect();
+				timerReconnect = TickCount + 1000;
+			}
+
+			var text = "Offline";
+			var color = new Color("#fb6969");
+			if (Network.Socket.IsConnected)	 			
+				(text, color) = ("Online", new Color("#58F063"));
+						
+			if (Status.Text != text)
+			{
+				Status.Text = text;
+				Status.AddColorOverride("font_color", color);
+			}
 		}
 
 		void Register_Create()
@@ -53,6 +70,7 @@ namespace Lun.Scripts.Models.Scenes
 				return;
 			}
 
+			Network.Sender.Register(user, pwd);
 		}
 
 		void Register_Exit()
@@ -72,7 +90,7 @@ namespace Lun.Scripts.Models.Scenes
 				return;
 			}
 
-
+			Network.Sender.Login(user, pwd);
 		}
 
 		void Login_Register()

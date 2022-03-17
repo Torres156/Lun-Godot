@@ -8,11 +8,13 @@ namespace Lun.Shared.Network
 {
     public enum PacketClient
     {
-
+        Register,
+        Login,
     }
 
     public enum PacketServer
     {
-
+        Alert,
+        Logged,
     }
 }

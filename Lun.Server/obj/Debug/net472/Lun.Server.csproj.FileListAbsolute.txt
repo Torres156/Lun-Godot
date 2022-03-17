@@ -14,3 +14,6 @@ D:\Projetos\Godot\Lun\Lun.Server\bin\Debug\net472\Lun.Shared.pdb
 D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.csproj.CopyComplete
 D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.exe
 D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.pdb
+D:\Projetos\Godot\Lun\Build\Lun.Server\Debug\net472\Lun.Server.exe.config
+D:\Projetos\Godot\Lun\Build\Lun.Server\Debug\net472\Lun.Server.exe
+D:\Projetos\Godot\Lun\Build\Lun.Server\Debug\net472\Lun.Server.pdb

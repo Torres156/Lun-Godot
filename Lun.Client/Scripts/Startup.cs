@@ -1,4 +1,5 @@
 global using static Lun.Scripts.Services.GlobalService;
+global using Lun.Shared;
 
 using Godot;
 
@@ -9,9 +10,15 @@ namespace Lun.Scripts
         // Called when the node enters the scene tree for the first time.
         public override void _Ready()
         {
-            InitializeSettings();               
+            InitializeSettings();
+			OS.SetWindowTitle(Settings.WindowTitle);
+			OS.WindowSize      = Settings.WindowSize;
+			OS.WindowMaximized = Settings.WindowMaximize;
 
-            Network.Socket.Initialize();
+			if (!OS.WindowMaximized)
+				OS.CenterWindow();
+
+			Network.Socket.Initialize();
 
             this.GetTree().Root.Connect("size_changed", this, nameof(Window_SizeChanged));
         }

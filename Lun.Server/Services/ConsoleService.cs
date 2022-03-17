@@ -16,6 +16,8 @@ namespace Lun.Server.Services
             {
 
             }
+
+            Program.Running = false;
         }
     }
 }

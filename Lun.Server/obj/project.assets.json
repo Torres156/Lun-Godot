@@ -30,36 +30,6 @@
           "bin/placeholder/Lun.Shared.dll": {}
         }
       }
-    },
-    ".NETFramework,Version=v4.7.2/win7-x86": {
-      "LiteNetLib/0.9.5.2": {
-        "type": "package",
-        "compile": {
-          "lib/net35/LiteNetLib.dll": {}
-        },
-        "runtime": {
-          "lib/net35/LiteNetLib.dll": {}
-        }
-      },
-      "Newtonsoft.Json/13.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
-        },
-        "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
-        }
-      },
-      "Lun.Shared/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.7.2",
-        "compile": {
-          "bin/placeholder/Lun.Shared.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Lun.Shared.dll": {}
-        }
-      }
     }
   },
   "libraries": {
@@ -187,11 +157,6 @@
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "win7-x86": {
-        "#import": []
       }
     }
   }

@@ -59,11 +59,6 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
-      },
-      "runtimes": {
-        "win7-x86": {
-          "#import": []
-        }
       }
     },
     "D:\\Projetos\\Godot\\Lun\\Lun.Shared\\Lun.Shared.csproj": {

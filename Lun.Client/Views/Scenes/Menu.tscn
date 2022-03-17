@@ -85,6 +85,9 @@ margin_top = -156.5
 margin_right = 150.0
 margin_bottom = 156.5
 custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Username" parent="Login" instance=ExtResource( 3 )]
 anchor_left = 0.5
@@ -261,6 +264,27 @@ custom_colors/font_color_hover = Color( 0.356863, 0.560784, 0.984314, 1 )
 enabled_focus_mode = 0
 text = "X"
 underline = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 14.0
+margin_top = 12.0
+margin_right = 54.0
+margin_bottom = 26.0
+text = "Status:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Status" type="Label" parent="."]
+margin_left = 65.0
+margin_top = 12.0
+margin_right = 108.0
+margin_bottom = 26.0
+custom_colors/font_color = Color( 0.984314, 0.411765, 0.411765, 1 )
+text = "Offline"
 __meta__ = {
 "_edit_use_anchors_": false
 }

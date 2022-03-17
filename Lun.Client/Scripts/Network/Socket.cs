@@ -13,6 +13,8 @@ namespace Lun.Scripts.Network
 
 		public static NetManager Device { get; private set; }
 
+		static bool Debug_Closing = false;
+
 		public static void Initialize()
 		{
 			listener = new EventBasedNetListener();
@@ -20,17 +22,36 @@ namespace Lun.Scripts.Network
 			Device = new NetManager(listener);
 			Device.IPv6Enabled = IPv6Mode.Disabled;
 			Device.Start();
+
+			listener.NetworkReceiveEvent += Listener_NetworkReceiveEvent;
+		}
+
+		private static void Listener_NetworkReceiveEvent(NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
+		{
+			Receive.Handle(reader);
 		}
 
 		public static void Connect()
-		{
-			Device.Connect("localhost", 4000, "");
+		{				
+			if (Debug_Closing)
+				return;
+
+			Device.Connect("localhost", Constants.PORT, "");
 		}
 
 		public static void Poll()
 			=> Device.PollEvents();
 
 		public static void Close()
-			=> Device.Stop();
+		{
+			if (IsConnected)
+			{
+				Device.FirstPeer.Disconnect();
+				Debug_Closing = true;
+			}
+		}
+
+		public static bool IsConnected
+			=> Device != null && Device.FirstPeer != null && Device.FirstPeer.ConnectionState == ConnectionState.Connected;
 	}
 }

@@ -22,10 +22,32 @@ namespace Lun.Server.Network
 
             listener.PeerConnectedEvent += Listener_PeerConnectedEvent;
             listener.PeerDisconnectedEvent += Listener_PeerDisconnectedEvent;
+            listener.NetworkReceiveEvent += Listener_NetworkReceiveEvent;
+            listener.ConnectionRequestEvent += Listener_ConnectionRequestEvent;
+        }
+
+        private static void Listener_ConnectionRequestEvent(ConnectionRequest request)
+        {
+            if (Device.ConnectedPeersCount < Constants.MAX_PLAYERS)
+                request.Accept();
+            else
+                request.Reject();
+        }
+
+        private static void Listener_NetworkReceiveEvent(NetPeer peer, NetPacketReader reader, DeliveryMethod deliveryMethod)
+        {
+            Receive.Handle(peer, reader);
         }
 
         private static void Listener_PeerDisconnectedEvent(NetPeer peer, DisconnectInfo disconnectInfo)
         {
+            var findAccount = PlayerService.FindAccount(peer);
+            if (findAccount != null)
+            {
+                PlayerService.SaveAccount(findAccount);
+                PlayerService.Accounts.Remove(findAccount);
+            }
+            
             Console.WriteLine($"Connection entry <{peer.EndPoint.ToString()}> has been disconnected!");
         }
 

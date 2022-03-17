@@ -1,5 +1,6 @@
 ﻿global using static Lun.Server.Services.GlobalService;
 global using Lun.Server.Services;
+global using Lun.Shared;
 
 
 using System;
