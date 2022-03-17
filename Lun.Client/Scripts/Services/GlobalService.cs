@@ -15,6 +15,8 @@ namespace Lun.Scripts.Services
 
         public static SettingsModel Settings { get; set; }
 
+		public static int UseCharacterSlot = 0;
+
         public static void InitializeSettings()
         {
             Settings = new SettingsModel();

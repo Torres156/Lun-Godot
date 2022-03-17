@@ -43,7 +43,6 @@ namespace Lun.Server.Network
             }
 
             var account = PlayerService.LoadAccount(user);
-
             if (account.Password != pwd)
             {
                 Sender.Alert(peer, $"Conta ou senha incorreta!");

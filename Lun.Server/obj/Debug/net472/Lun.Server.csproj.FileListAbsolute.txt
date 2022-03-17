@@ -17,3 +17,15 @@ D:\Projetos\Godot\Lun\Lun.Server\obj\Debug\net472\Lun.Server.pdb
 D:\Projetos\Godot\Lun\Build\Lun.Server\Debug\net472\Lun.Server.exe.config
 D:\Projetos\Godot\Lun\Build\Lun.Server\Debug\net472\Lun.Server.exe
 D:\Projetos\Godot\Lun\Build\Lun.Server\Debug\net472\Lun.Server.pdb
+D:\Projects\Godot\Lun-Godot\Build\Lun.Server\Debug\net472\Lun.Server.exe.config
+D:\Projects\Godot\Lun-Godot\Build\Lun.Server\Debug\net472\Lun.Server.exe
+D:\Projects\Godot\Lun-Godot\Build\Lun.Server\Debug\net472\Lun.Server.pdb
+D:\Projects\Godot\Lun-Godot\Lun.Server\obj\Debug\net472\Lun.Server.csproj.AssemblyReference.cache
+D:\Projects\Godot\Lun-Godot\Lun.Server\obj\Debug\net472\Lun.Server.csproj.SuggestedBindingRedirects.cache
+D:\Projects\Godot\Lun-Godot\Lun.Server\obj\Debug\net472\Lun.Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Godot\Lun-Godot\Lun.Server\obj\Debug\net472\Lun.Server.AssemblyInfoInputs.cache
+D:\Projects\Godot\Lun-Godot\Lun.Server\obj\Debug\net472\Lun.Server.AssemblyInfo.cs
+D:\Projects\Godot\Lun-Godot\Lun.Server\obj\Debug\net472\Lun.Server.csproj.CoreCompileInputs.cache
+D:\Projects\Godot\Lun-Godot\Lun.Server\obj\Debug\net472\Lun.Server.csproj.CopyComplete
+D:\Projects\Godot\Lun-Godot\Lun.Server\obj\Debug\net472\Lun.Server.exe
+D:\Projects\Godot\Lun-Godot\Lun.Server\obj\Debug\net472\Lun.Server.pdb

@@ -12,6 +12,8 @@ namespace Lun.Scripts.Models.Scenes
 	{
 		Button[] slots;
 
+		int currentSlot = 0;
+
 		public override void _Ready()
 		{
 			slots = new Button[Constants.MAX_CHARACTERS];
@@ -22,6 +24,20 @@ namespace Lun.Scripts.Models.Scenes
 			}
 
 			GetNode<Button>("Panel/Back").Connect("button_up", this, nameof(Back_Release));
+			GetNode<Button>("Panel/UseOrCreate").Connect("button_up", this, nameof(CreateOrUse_Release));
+		}
+
+		void CreateOrUse_Release()
+		{
+			if (PlayerService.characterSelect[currentSlot] != null)
+			{
+				// USE CHARACTER
+			}
+			else
+			{
+				UseCharacterSlot = currentSlot;
+				GetTree().ChangeScene("res://Views/Scenes/CreateCharacter.tscn");
+			}
 		}
 
 		void Back_Release()
@@ -37,6 +53,7 @@ namespace Lun.Scripts.Models.Scenes
 					slots[i].Pressed = false;
 
 			slots[Index].Pressed = true;
+			currentSlot = Index;
 		}
 
 		public override void _Process(float delta)

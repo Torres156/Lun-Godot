@@ -7,3 +7,12 @@ D:\Projetos\Godot\Lun\Lun.Shared\bin\Debug\net472\Lun.Shared.dll
 D:\Projetos\Godot\Lun\Lun.Shared\bin\Debug\net472\Lun.Shared.pdb
 D:\Projetos\Godot\Lun\Lun.Shared\obj\Debug\net472\Lun.Shared.dll
 D:\Projetos\Godot\Lun\Lun.Shared\obj\Debug\net472\Lun.Shared.pdb
+D:\Projects\Godot\Lun-Godot\Lun.Shared\bin\Debug\net472\Lun.Shared.dll
+D:\Projects\Godot\Lun-Godot\Lun.Shared\bin\Debug\net472\Lun.Shared.pdb
+D:\Projects\Godot\Lun-Godot\Lun.Shared\obj\Debug\net472\Lun.Shared.csproj.AssemblyReference.cache
+D:\Projects\Godot\Lun-Godot\Lun.Shared\obj\Debug\net472\Lun.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Godot\Lun-Godot\Lun.Shared\obj\Debug\net472\Lun.Shared.AssemblyInfoInputs.cache
+D:\Projects\Godot\Lun-Godot\Lun.Shared\obj\Debug\net472\Lun.Shared.AssemblyInfo.cs
+D:\Projects\Godot\Lun-Godot\Lun.Shared\obj\Debug\net472\Lun.Shared.csproj.CoreCompileInputs.cache
+D:\Projects\Godot\Lun-Godot\Lun.Shared\obj\Debug\net472\Lun.Shared.dll
+D:\Projects\Godot\Lun-Godot\Lun.Shared\obj\Debug\net472\Lun.Shared.pdb
