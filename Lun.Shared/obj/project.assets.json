@@ -8,19 +8,24 @@
     ".NETFramework,Version=v4.7.2": []
   },
   "packageFolders": {
-    "C:\\Users\\Gustavo\\.nuget\\packages\\": {}
+    "C:\\Users\\Gustavo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Godot\\Lun-Godot\\Lun.Shared\\Lun.Shared.csproj",
+      "projectUniqueName": "D:\\Projetos\\Godot\\Lun\\Lun.Shared\\Lun.Shared.csproj",
       "projectName": "Lun.Shared",
-      "projectPath": "D:\\Projects\\Godot\\Lun-Godot\\Lun.Shared\\Lun.Shared.csproj",
+      "projectPath": "D:\\Projetos\\Godot\\Lun\\Lun.Shared\\Lun.Shared.csproj",
       "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Godot\\Lun-Godot\\Lun.Shared\\obj\\",
+      "outputPath": "D:\\Projetos\\Godot\\Lun\\Lun.Shared\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -45,7 +50,7 @@
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

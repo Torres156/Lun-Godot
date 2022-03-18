@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TWG8ClUab3hzXIoAzuUCCFBLwPbr4IndRPCFamRQdy0fzYwhluETs9dkgXHCoP1jG3Uo95TJehULyMBpLz4Fvg==",
+  "dgSpecHash": "KkIS0sNjrwIOO4W5joOCDtHKQGldcvDuxkqSaSVE6vT2cJUSDEDRonYXozdC1qfpn2VwHcGdW4NI8EXt3X0cbw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Godot\\Lun-Godot\\Lun.Server\\Lun.Server.csproj",
+  "projectFilePath": "D:\\Projetos\\Godot\\Lun\\Lun.Server\\Lun.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gustavo\\.nuget\\packages\\litenetlib\\0.9.5.2\\litenetlib.0.9.5.2.nupkg.sha512",
     "C:\\Users\\Gustavo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"

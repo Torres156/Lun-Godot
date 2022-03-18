@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "feMU9+SCK8tO1dMp23+QZZKSocdR5FwWFZqKN4yqN01lV3PpMYbwlfo0jrUoHrpdq/LdhN4OIOwiX+mzUcf6ug==",
+  "dgSpecHash": "bAkK5mMAHcGEr/aWPghonpIlucuSwjVZllFfhOOc7MIypFBBZT9x4rhC9T5LSAM/SXUg2seZl/tjHVvxjdabIA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Godot\\Lun-Godot\\Lun.Shared\\Lun.Shared.csproj",
+  "projectFilePath": "D:\\Projetos\\Godot\\Lun\\Lun.Shared\\Lun.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
