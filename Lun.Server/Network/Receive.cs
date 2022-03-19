@@ -1,6 +1,7 @@
 ﻿using LiteNetLib;
 using LiteNetLib.Utils;
 using Lun.Server.Models.Player;
+using Lun.Shared.Models;
 using Lun.Shared.Network;
 using System;
 using System.Collections.Generic;
@@ -18,15 +19,59 @@ namespace Lun.Server.Network
 
             switch(packet)
             {
-                case PacketClient.Register: Register(peer, buffer); break;
-                case PacketClient.Login: Login(peer, buffer); break;
+                case PacketClient.Register       : Register(peer, buffer); break;
+                case PacketClient.Login          : Login(peer, buffer); break;
+                case PacketClient.CharacterCreate: CharacterCreate(peer, buffer); break;
+                case PacketClient.CharacterUse   : CharacterUse(peer, buffer); break;
             }
+        }
+
+        static void CharacterUse(NetPeer peer, NetDataReader buffer)
+        {
+            var slot = buffer.GetInt();
+
+            var account   = PlayerService.FindAccount(peer);
+            var character = PlayerService.LoadCharacter(account.CharacterName[slot]);
+            character.peer = peer;
+            PlayerService.Characters.Add(character);
+
+
+        }
+
+        static void CharacterCreate(NetPeer peer, NetDataReader buffer)
+        {
+            var slot     = buffer.GetInt();
+            var name     = buffer.GetString();
+            var classId  = buffer.GetInt();
+            var spriteId = buffer.GetInt();
+
+            if (PlayerService.ExistsCharacter(name))
+            {
+                Sender.Alert(peer, $"O nome {name} não está disponivel!");
+                return;
+            }
+
+            var character = new Character();
+            character.Name     = name;
+            character.ClassId  = classId;
+            character.SpriteId = spriteId;
+            character.Position = new Vector2(10, 10) * 32;
+            character.MapId    = 1;
+            PlayerService.SaveCharacter(character);
+
+            var account = PlayerService.FindAccount(peer);
+            account.CharacterName[slot] = name;
+            PlayerService.SaveAccount(account);
+
+            Sender.Logged(account);
+            Sender.Alert(account, "Personagem criado com sucesso!");
+
         }
 
         static void Login(NetPeer peer, NetDataReader buffer)
         {
             var user = buffer.GetString();
-            var pwd = buffer.GetString();
+            var pwd  = buffer.GetString();
 
             if (!PlayerService.ExistsAccount(user))
             {
@@ -51,13 +96,15 @@ namespace Lun.Server.Network
 
             account.peer = peer;
             PlayerService.Accounts.Add(account);
+
+            Sender.ClassUpdate(account);
             Sender.Logged(account);
         }
 
         static void Register(NetPeer peer, NetDataReader buffer)
         {
             var user = buffer.GetString();
-            var pwd = buffer.GetString();
+            var pwd  = buffer.GetString();
 
             if (PlayerService.ExistsAccount(user))
             {
@@ -66,7 +113,7 @@ namespace Lun.Server.Network
             }
 
             var account = new Account();
-            account.Name = user;
+            account.Name     = user;
             account.Password = pwd;
 
             PlayerService.SaveAccount(account);

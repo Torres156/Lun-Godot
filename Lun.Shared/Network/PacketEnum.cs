@@ -10,11 +10,14 @@ namespace Lun.Shared.Network
     {
         Register,
         Login,
+        CharacterCreate,
+        CharacterUse,
     }
 
     public enum PacketServer
     {
         Alert,
         Logged,
+        ClassUpdate,          
     }
 }

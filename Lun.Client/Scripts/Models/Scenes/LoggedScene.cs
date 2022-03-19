@@ -67,13 +67,25 @@ namespace Lun.Scripts.Models.Scenes
 				{	
 					sprite.Visible = false;
 					name.Visible   = false;
-				 }
+				}
 				else
 				{
 					sprite.Visible = true;
 					name.Visible   = true;
+
+					name.Text = PlayerService.characterSelect[i].Name; 					
+
+					var spriteId = PlayerService.characterSelect[i].SpriteID ;
+					if (sprite.Texture.ResourceName != $"{spriteId}.png")
+					{
+						sprite.Texture = ResourceLoader.Load<Texture>($"res://Textures/Character/{spriteId}.png");
+						GD.Print(sprite.Texture.ResourceName);
+					}
 				}
 			}
+
+			GetNode<Button>("Panel/UseOrCreate").Text =  PlayerService.characterSelect[currentSlot] == null ? "Criar" :  "Usar";
+
 		}
 	}
 }

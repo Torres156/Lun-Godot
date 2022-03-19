@@ -25,6 +25,10 @@ namespace Lun.Server
             WriteLine("Initialize server!");
             WriteLine("");
 
+            WriteLine(":: Database ::");
+            ClassService.Initialize();
+
+            WriteLine("");
             WriteLine("Initialize connection!");
             Network.Socket.Initialize();
             WriteLine("");

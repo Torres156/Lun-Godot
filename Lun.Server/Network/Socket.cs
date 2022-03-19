@@ -47,6 +47,15 @@ namespace Lun.Server.Network
                 PlayerService.SaveAccount(findAccount);
                 PlayerService.Accounts.Remove(findAccount);
             }
+
+            var findCharacter = PlayerService.FindCharacter(peer);
+            if (findCharacter != null)
+            {
+                // REMOVE FROM MAP
+
+                PlayerService.SaveCharacter(findCharacter);
+                PlayerService.Characters.Remove(findCharacter);
+            }
             
             Console.WriteLine($"Connection entry <{peer.EndPoint.ToString()}> has been disconnected!");
         }

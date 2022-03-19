@@ -8,9 +8,9 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lun.Shared\Lun.Shared.csproj" />
+    <Folder Include="Scripts\Controller\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Scripts\Controller\" />
+    <ProjectReference Include="..\Lun.Shared\Lun.Shared.csproj" />
   </ItemGroup>
 </Project>
