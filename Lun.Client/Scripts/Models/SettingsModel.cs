@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,6 +13,7 @@ namespace Lun.Scripts.Models
         public Vector2 WindowSize       { get; set; } = new Vector2(800, 600); 
         public bool    WindowMaximize   { get; set; } = false;
         public bool    WindowFullscreen { get; set; } = false;
+		public bool    Music			{ get; set; } = true;
 
         [JsonIgnore]
         public string WindowTitle { get; set; } = "Lun Godot Engine";

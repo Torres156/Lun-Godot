@@ -66,6 +66,25 @@ namespace Lun.Scripts.Models.Components
 			this.Connect("gui_input", this, nameof(GuiInput));
 		}
 
+		public override void _Process(float delta)
+		{
+			var screensize = OS.WindowSize;
+			var pos = RectPosition;
+			if (pos.x < 0)
+				pos.x = 0;
+
+			if (pos.y < 0)
+				pos.y = 0;
+
+			if (pos.x + RectSize.x > screensize.x)	 			
+				pos.x = screensize.x - RectSize.x;			
+
+			if (pos.y + RectSize.y > screensize.y) 			
+				pos.y = screensize.y - RectSize.y;
+
+			RectPosition = pos;
+		}
+
 		void GuiInput(InputEvent e)
 		{
 			if (e is InputEventMouseButton input)
@@ -81,6 +100,13 @@ namespace Lun.Scripts.Models.Components
 		void ButtonExit_Pressed()
 		{
 			this.Hide();
+		}
+
+		public new void Show()
+		{
+			base.Show();
+			if (this.GetParent() != null && (this.GetParent() is WindowManager))
+				this.GetParent<WindowManager>()?.SetWindowFocus(this);
 		}
 
 		void Header_Input(InputEvent e)

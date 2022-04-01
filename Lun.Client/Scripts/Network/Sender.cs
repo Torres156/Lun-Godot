@@ -11,6 +11,11 @@ namespace Lun.Scripts.Network
 {
 	internal static class Sender
 	{
+		public static void RequestGameplayData()
+		{
+			SendTo(Create(PacketClient.RequestGameplayData));
+		}
+
 		public static void CharacterUse(int slot)
 		{
 			var buffer = Create(PacketClient.CharacterUse);

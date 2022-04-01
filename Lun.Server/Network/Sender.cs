@@ -2,17 +2,27 @@
 using LiteNetLib.Utils;
 using Lun.Server.Models.Player;
 using Lun.Server.Network.Interfaces;
+using Lun.Shared.Models.Player;
 using Lun.Shared.Network;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Lun.Server.Network
 {
     internal static class Sender
     {
+        public static void CharacterMainData(Character player)
+        {
+            var buffer = Create(PacketServer.CharacterMainData);
+
+            buffer.Put(JsonConvert.SerializeObject(player as ICharacterModel));
+            SendTo(player, buffer);
+        }
+
+        public static void GameplayStart(Character player)
+        {
+            SendTo(player, Create(PacketServer.GameplayStart));
+        }
+
         public static void ClassUpdate(Account account)
         {
             var buffer = Create(PacketServer.ClassUpdate);

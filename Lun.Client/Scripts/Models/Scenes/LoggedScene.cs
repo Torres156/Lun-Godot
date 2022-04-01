@@ -31,7 +31,7 @@ namespace Lun.Scripts.Models.Scenes
 		{
 			if (PlayerService.characterSelect[currentSlot] != null)
 			{
-				// USE CHARACTER
+				Network.Sender.CharacterUse(currentSlot);
 			}
 			else
 			{

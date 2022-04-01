@@ -2,6 +2,7 @@ global using static Lun.Scripts.Services.GlobalService;
 global using Lun.Shared;
 
 using Godot;
+using Lun.Scripts.Services;
 
 namespace Lun.Scripts
 {
@@ -21,6 +22,8 @@ namespace Lun.Scripts
 			Network.Socket.Initialize();
 
             this.GetTree().Root.Connect("size_changed", this, nameof(Window_SizeChanged));
+
+			ResourceService.Initialize();
         }
 
         void Window_SizeChanged()

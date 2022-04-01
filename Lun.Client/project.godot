@@ -27,6 +27,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Startup="*res://Scripts/Startup.cs"
+MusicGlobal="*res://Views/MusicGlobal.tscn"
 
 [display]
 

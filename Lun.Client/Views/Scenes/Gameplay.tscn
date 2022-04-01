@@ -1,5 +1,119 @@
-[gd_scene format=2]
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Views/CharacterObject.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Controller/ActionController.cs" type="Script" id=2]
+[ext_resource path="res://Extends/WindowManager.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Extends/WindowControl.res" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Models/Scenes/GameplayScene.cs" type="Script" id=5]
+[ext_resource path="res://Textures/Tileset/1.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Controller/AdminController.cs" type="Script" id=7]
+[ext_resource path="res://Scripts/Controller/MapEditor/TileController.cs" type="Script" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.180392 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+shadow_color = Color( 0, 0, 0, 0.341176 )
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 1, 0.117647, 0.117647, 1 )
 
 [node name="Gameplay" type="Node"]
+script = ExtResource( 5 )
+
+[node name="ActionController" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sort" type="YSort" parent="."]
+
+[node name="MainCharacter" parent="Sort" instance=ExtResource( 1 )]
+position = Vector2( 495, 325 )
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="WindowManager" parent="UI" instance=ExtResource( 3 )]
+
+[node name="Admin" parent="UI/WindowManager" instance=ExtResource( 4 )]
+visible = false
+margin_left = -136.5
+margin_top = -146.5
+margin_right = 136.5
+margin_bottom = 146.5
+Title = "Panel de Administração"
+
+[node name="AdminController" type="Node" parent="UI/WindowManager/Admin"]
+script = ExtResource( 7 )
+
+[node name="MapEditor" type="Button" parent="UI/WindowManager/Admin"]
+modulate = Color( 0.737255, 0.807843, 0.992157, 1 )
+margin_left = 16.0
+margin_top = 41.0
+margin_right = 142.0
+margin_bottom = 63.0
+text = "Mapa Editor"
+
+[node name="MapEditor" parent="UI/WindowManager" instance=ExtResource( 4 )]
+margin_left = -499.0
+margin_top = -285.0
+margin_right = -130.0
+margin_bottom = 68.0
+Title = "Editor de Mapa"
+
+[node name="Tile" type="Panel" parent="UI/WindowManager/MapEditor"]
+margin_left = 10.0
+margin_top = 56.0
+margin_right = 268.0
+margin_bottom = 314.0
+rect_clip_content = true
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Texture" type="TextureRect" parent="UI/WindowManager/MapEditor/Tile"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 257.0
+margin_bottom = 257.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_clip_content = true
+texture = ExtResource( 6 )
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Select" type="Panel" parent="UI/WindowManager/MapEditor/Tile"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 17.0
+margin_bottom = 17.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 2 )
+
+[node name="Label" type="Label" parent="UI/WindowManager/MapEditor"]
+margin_left = 12.0
+margin_top = 324.0
+margin_right = 70.0
+margin_bottom = 338.0
+text = "TileNum:"
+
+[node name="TileId" type="SpinBox" parent="UI/WindowManager/MapEditor"]
+margin_left = 75.0
+margin_top = 319.0
+margin_right = 149.0
+margin_bottom = 343.0
+min_value = 1.0
+max_value = 1.0
+value = 1.0
+rounded = true

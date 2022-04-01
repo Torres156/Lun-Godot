@@ -15,6 +15,11 @@ namespace Lun.Server.Services
         public static List<Account> Accounts = new List<Account>();
         public static List<Character> Characters = new List<Character>();
 
+        public static void JoinGame(Character player)
+        {               
+            Network.Sender.CharacterMainData(player);
+        }
+
         public static void SaveAccount(Account account)
         {
             var path = "Accounts/";

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Big Hero - Devine-King [Dance Club].mp3-d9c14762fa1c929a87dc3439101a9411.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Big Hero - Devine-King [Dance Club].mp3"
+dest_files=[ "res://.import/Big Hero - Devine-King [Dance Club].mp3-d9c14762fa1c929a87dc3439101a9411.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

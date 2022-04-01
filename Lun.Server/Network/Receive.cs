@@ -19,11 +19,18 @@ namespace Lun.Server.Network
 
             switch(packet)
             {
-                case PacketClient.Register       : Register(peer, buffer); break;
-                case PacketClient.Login          : Login(peer, buffer); break;
-                case PacketClient.CharacterCreate: CharacterCreate(peer, buffer); break;
-                case PacketClient.CharacterUse   : CharacterUse(peer, buffer); break;
+                case PacketClient.Register           : Register(peer, buffer); break;
+                case PacketClient.Login              : Login(peer, buffer); break;
+                case PacketClient.CharacterCreate    : CharacterCreate(peer, buffer); break;
+                case PacketClient.CharacterUse       : CharacterUse(peer, buffer); break;
+                case PacketClient.RequestGameplayData: RequestGameplayData(peer, buffer); break;
             }
+        }
+
+        static void RequestGameplayData(NetPeer peer, NetDataReader buffer)
+        {
+            var player = PlayerService.FindCharacter(peer);
+            PlayerService.JoinGame(player);
         }
 
         static void CharacterUse(NetPeer peer, NetDataReader buffer)
@@ -35,7 +42,7 @@ namespace Lun.Server.Network
             character.peer = peer;
             PlayerService.Characters.Add(character);
 
-
+            Sender.GameplayStart(character);
         }
 
         static void CharacterCreate(NetPeer peer, NetDataReader buffer)

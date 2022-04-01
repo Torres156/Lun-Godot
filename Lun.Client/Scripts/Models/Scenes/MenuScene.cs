@@ -1,4 +1,5 @@
 using Godot;
+using Lun.Scripts.Controller;
 using Lun.Scripts.Services;
 using System;
 
@@ -24,6 +25,8 @@ namespace Lun.Scripts.Models.Scenes
 			Register = GetNode<Panel>("Register");
 			Register.GetNode("Exit").Connect("button_up", this, nameof(Register_Exit));
 			Register.GetNode("Create").Connect("button_up", this, nameof(Register_Create));
+
+			MusicController.Play("Big Hero - Devine-King [Dance Club].mp3");
 		}
 
 		public override void _Process(float delta)

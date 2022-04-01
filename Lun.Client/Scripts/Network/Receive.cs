@@ -2,9 +2,11 @@ using Godot;
 using LiteNetLib.Utils;
 using Lun.Scripts.Models.Player;
 using Lun.Scripts.Services;
+using Lun.Shared.Enums;
 using Lun.Shared.Models;
 using Lun.Shared.Models.Player;
 using Lun.Shared.Network;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +23,30 @@ namespace Lun.Scripts.Network
 
 			switch(packet)
 			{
-				case PacketServer.Alert      : Alert(buffer); break;
-				case PacketServer.Logged     : Logged(buffer); break;
-				case PacketServer.ClassUpdate: ClassUpdate(buffer); break;
+				case PacketServer.Alert            : Alert(buffer); break;
+				case PacketServer.Logged           : Logged(buffer); break;
+				case PacketServer.ClassUpdate      : ClassUpdate(buffer); break;
+				case PacketServer.GameplayStart    : GameplayStart(buffer); break;
+				case PacketServer.CharacterMainData: CharacterMainData(buffer); break;
 			}
+		}
+
+		static void CharacterMainData(NetDataReader buffer)
+		{
+			var json = buffer.GetString();
+			var model = JsonConvert.DeserializeObject<CharacterModel>(json);
+
+			PlayerService.My = PlayerService.My ?? CurrentScene.GetNode<Character>("Sort/MainCharacter");
+			PlayerService.My.Sprite.Texture = ResourceLoader.Load<Texture>($"res://Textures/Character/{model.SpriteId}.png");
+			PlayerService.My.GetNode<Label>("Text/Name").Text = model.Name;
+			PlayerService.My.Position = model.Position.ToGodotVector2();
+			PlayerService.My.Direction = model.Direction;
+		}
+
+		static void GameplayStart(NetDataReader buffer)
+		{
+			GetTree.ChangeScene("res://Views/Scenes/Gameplay.tscn");
+			Sender.RequestGameplayData();
 		}
 
 		static void ClassUpdate(NetDataReader buffer)

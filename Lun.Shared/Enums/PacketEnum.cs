@@ -12,12 +12,15 @@ namespace Lun.Shared.Network
         Login,
         CharacterCreate,
         CharacterUse,
+        RequestGameplayData,
     }
 
     public enum PacketServer
     {
         Alert,
         Logged,
-        ClassUpdate,          
+        ClassUpdate,  
+        GameplayStart,
+        CharacterMainData,
     }
 }
